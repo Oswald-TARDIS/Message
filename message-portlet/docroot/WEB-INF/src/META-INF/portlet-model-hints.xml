@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+
+<model-hints>
+	<model name="com.message.model.t_message">
+		<field name="messageId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+	</model>
+	<model name="com.message.model.t_student">
+		<field name="studentId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="passwd" type="String" />
+	</model>
+	<model name="com.message.model.t_teacher">
+		<field name="teacherId" type="long" />
+		<field name="groupId" type="long" />
+		<field name="companyId" type="long" />
+		<field name="userId" type="long" />
+		<field name="userName" type="String" />
+		<field name="passwd" type="String" />
+	</model>
+</model-hints>

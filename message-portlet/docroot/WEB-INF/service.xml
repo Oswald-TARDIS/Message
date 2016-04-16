@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE service-builder PUBLIC "-//Liferay//DTD Service Builder 6.2.0//EN" "http://www.liferay.com/dtd/liferay-service-builder_6_2_0.dtd">
+<service-builder package-path="com.message">
+	<author>mazhe</author>
+	<namespace>message</namespace>
+
+	<entity name="t_teacher" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="teacherId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+		
+		<!-- Other fields -->
+		<column name="passwd" type="String" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="teacherId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="findByUserName" return-type="Collection">
+			<finder-column name="userName" />
+		</finder>
+	</entity>
+	<entity name="t_student" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="studentId" type="long" primary="true" />
+
+		<!-- Group instance -->
+
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<column name="userId" type="long" />
+		<column name="userName" type="String" />
+
+		<!-- Other fields -->
+		<column name="passwd" type="String" />
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="studentId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="findByUserName" return-type="Collection">
+			<finder-column name="userName" />
+		</finder>
+	</entity>
+	<entity name="t_message" local-service="true" remote-service="true">
+
+		<!-- PK fields -->
+
+		<column name="messageId" type="long" primary="true" />
+		<!-- Group instance -->
+		<column name="groupId" type="long" />
+		<column name="companyId" type="long" />
+		<!-- Other fields -->
+
+		<!-- Order -->
+
+		<order by="asc">
+			<order-column name="messageId" />
+		</order>
+
+		<!-- Finder methods -->
+
+		<finder name="findById" return-type="Collection">
+			<finder-column name="messageId" />
+		</finder>
+	</entity>
+</service-builder>

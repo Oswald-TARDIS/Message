@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" default-destroy-method="destroy" default-init-method="afterPropertiesSet" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+	<bean id="com.message.service.t_messageLocalService" class="com.message.service.impl.t_messageLocalServiceImpl" />
+	<bean id="com.message.service.t_messageService" class="com.message.service.impl.t_messageServiceImpl" />
+	<bean id="com.message.service.persistence.t_messagePersistence" class="com.message.service.persistence.t_messagePersistenceImpl" parent="basePersistence" />
+	<bean id="com.message.service.t_studentLocalService" class="com.message.service.impl.t_studentLocalServiceImpl" />
+	<bean id="com.message.service.t_studentService" class="com.message.service.impl.t_studentServiceImpl" />
+	<bean id="com.message.service.persistence.t_studentPersistence" class="com.message.service.persistence.t_studentPersistenceImpl" parent="basePersistence" />
+	<bean id="com.message.service.t_teacherLocalService" class="com.message.service.impl.t_teacherLocalServiceImpl" />
+	<bean id="com.message.service.t_teacherService" class="com.message.service.impl.t_teacherServiceImpl" />
+	<bean id="com.message.service.persistence.t_teacherPersistence" class="com.message.service.persistence.t_teacherPersistenceImpl" parent="basePersistence" />
+</beans>
